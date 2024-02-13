@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+
+   <div class="header">
+     <h1> JavaScript: METODIT</h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+        <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+        <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+        <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+        <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+        <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+        <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+        <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+        <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+        <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+        <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+      <h3> Tehtävä 1 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+&LTbutton class="the_button_2" type="button" onclick=
+"throw_dice(1,6)"> HEITÄ NOPPAA! &LT/button>
+
+&LTimg id="random_dice_image" src="" 
+style="display: block; width: 159px; height: 159px;">
+
+&LTscript>
+function throw_dice(min, max) {
+ var noppa = Math.floor(Math.random() * (max - min + 1) ) + min;
+
+
+if (noppa == 1) {
+    document.getElementById("random_dice_image").src = "images/dice1.jpg";
+  } else if (noppa == 2) {
+    document.getElementById("random_dice_image").src = "images/dice2.jpg";
+  } else if (noppa == 3) {
+    document.getElementById("random_dice_image").src = "images/dice3.jpg";
+  } else if (noppa == 4) {
+    document.getElementById("random_dice_image").src = "images/dice4.jpg";
+  } else if (noppa == 5) {
+    document.getElementById("random_dice_image").src = "images/dice5.jpg";
+  } else {
+    document.getElementById("random_dice_image").src = "images/dice6.jpg";
+  }
+}
+&LT/script>
+</pre></div>
+
+
+<button class="the_button_2" type="button" onclick="throw_dice(1,6)"> HEITÄ NOPPAA! </button>
+
+<img id="random_dice_image" src="" style="display: block; width: 159px; height: 159px;">
+
+<script>
+function throw_dice(min, max) {
+ var noppa = Math.floor(Math.random() * (max - min + 1) ) + min;
+
+
+if (noppa == 1) {
+    document.getElementById("random_dice_image").src = "images/dice1.jpg";
+  } else if (noppa == 2) {
+    document.getElementById("random_dice_image").src = "images/dice2.jpg";
+  } else if (noppa == 3) {
+    document.getElementById("random_dice_image").src = "images/dice3.jpg";
+  } else if (noppa == 4) {
+    document.getElementById("random_dice_image").src = "images/dice4.jpg";
+  } else if (noppa == 5) {
+    document.getElementById("random_dice_image").src = "images/dice5.jpg";
+  } else {
+    document.getElementById("random_dice_image").src = "images/dice6.jpg";
+  }
+}
+</script>
+
+
+<!-------------BORDER-------------->
+
+    </div>
+   </div>
+
+
+   <div class="footer">
+    <p>JavaScript</p>
+   </div>
+
+ </body>
+</html>

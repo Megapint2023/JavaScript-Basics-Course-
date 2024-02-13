@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+
+   <div class="header">
+     <h1> JavaScript: EHTO & TOISTO</h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+        <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+        <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+        <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+        <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+        <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+        <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+        <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+        <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+        <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+        <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+      <h3> Tehtävä 1 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+&LTbutton class="the_button_3" type="button" onclick="greeting()"> Hello? &LT/button>
+&LTp id="greeting">&LT/p>
+
+&LTscript>
+ function greeting() {
+   var getHours = new Date().getHours(); 
+   var greeting;
+   var color;
+   var fontWeight;
+
+   if (getHours >= 5 && getHours &LT 10) {
+       greeting = "STATUS: AFK";
+       color = "purple";
+       fontWeight = "bold";
+   } 
+  else if (getHours >= 10 && getHours &LT 14) {
+           greeting = "10:00 - 14:00 -> My day in progress. I am probably coding." + "&LTbr>" +
+           "STATUS: Online.";
+           color = "green";
+           fontWeight = "bold";  
+  }
+  else if (getHours >= 14 && getHours &LT 17) {
+           greeting = "14:00 - 17:00 -> My day in progress. I am probably coding." + "&LTbr>" +
+           "STATUS: Online.";
+           color = "green";
+           fontWeight = "bold";
+  }
+  else if (getHours >= 17 && getHours &LT 23) {
+           greeting = "17:00 - 23:00 -> Dont not disturb, unless its important." + "&LTbr>" +
+           "STATUS: DND.";  
+           color = "red";
+           fontWeight = "bold";
+  }
+   else {
+       greeting = "Brain status -> Recharging." + "&LTbr>" +
+           "STATUS: AFK";
+       color = "purple";
+       fontWeight = "bold";
+   }
+   document.getElementById("greeting").innerHTML = greeting;
+   document.getElementById("greeting").style.color = color;
+ }
+ &LT/script>
+</pre></div>
+
+<button class="the_button_3" type="button" onclick="greeting()"> Hello? </button>
+<p id="greeting"></p>
+
+<script>
+ function greeting() {
+   var getHours = new Date().getHours(); 
+   var greeting;
+   var color;
+   var fontWeight;
+
+   if (getHours >= 5 && getHours < 10) {
+       greeting = "STATUS: AFK";
+       color = "purple";
+       fontWeight = "bold";
+   } 
+  else if (getHours >= 10 && getHours < 14) {
+           greeting = "10:00 - 14:00 -> My day in progress. I am probably coding." + "<br>" +
+           "STATUS: Online.";
+           color = "green";
+           fontWeight = "bold";  
+  }
+  else if (getHours >= 14 && getHours < 17) {
+           greeting = "14:00 - 17:00 -> My day in progress. I am probably coding." + "<br>" +
+           "STATUS: Online.";
+           color = "green";
+           fontWeight = "bold";
+  }
+  else if (getHours >= 17 && getHours < 23) {
+           greeting = "17:00 - 23:00 -> Dont not disturb, unless its important." + "<br>" +
+           "STATUS: DND.";  
+           color = "red";
+           fontWeight = "bold";
+  }
+   else {
+       greeting = "Brain status -> Recharging." + "<br>" +
+           "STATUS: AFK";
+       color = "purple";
+       fontWeight = "bold";
+   }
+   document.getElementById("greeting").innerHTML = greeting;
+   document.getElementById("greeting").style.color = color;
+ }
+ </script>
+
+<!-------------WHAT-------------->
+
+    </div>
+   </div>
+
+   <div class="footer">
+    <p>JavaScript</p>
+   </div>
+
+ </body>
+</html>

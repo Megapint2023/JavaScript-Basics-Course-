@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+
+   <div class="header">
+     <h1> JavaScript: MUUTTUJAT</h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+    <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+    <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+    <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+    <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+    <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+    <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+    <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+    <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+    <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+    <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+    <h3> Tehtävä 1 </h3>
+     <p> Lyhyesti, mitä koodaus tekee. </p>
+  <div id="koodi"><pre>
+  &LTp id="Rinnankytky">&LT/p>
+  &LTp id="R1">&LT/p>
+  &LTp id="R2">&LT/p>
+  &LTp id="R3">&LT/p>
+  &LTp id="Rkok">&LT/p>
+  
+  &LTscript> 
+  var otsikko = "Rinnankytkentä:";
+  var R1 = 100;
+  var R2 = 50;
+  var R3 = 220;
+  var Rkok = 1/((1/R1) + (1/R2) + (1/R3));
+  
+function rinnanlasku() {
+document.getElementById("Rinnankytky").innerHTML = otsikko;
+document.getElementById("R1").innerHTML = "R1 = " + R1 + "Ω";
+document.getElementById("R2").innerHTML = "R2 = " + R2 + "Ω";
+document.getElementById("R3").innerHTML = "R3 = " + R3 + "Ω";
+document.getElementById("Rkok").innerHTML = "Rkok = " + Rkok.toFixed(2) + "Ω";
+  }
+  rinnanlasku();
+  &LT/script>
+</pre></div>
+
+<p id="Rinnankytky"></p>
+<p id="R1"></p>
+<p id="R2"></p>
+<p id="R3"></p>
+<p id="Rkok"></p>
+
+<script> 
+var otsikko = "Rinnankytkentä:";
+var R1 = 100;
+var R2 = 50;
+var R3 = 220;
+var Rkok = 1/((1/R1) + (1/R2) + (1/R3));
+
+function rinnanlasku() {
+  document.getElementById("Rinnankytky").innerHTML = otsikko;
+   document.getElementById("R1").innerHTML = "R1 = " + R1 + "Ω";
+   document.getElementById("R2").innerHTML = "R2 = " + R2 + "Ω";
+   document.getElementById("R3").innerHTML = "R3 = " + R3 + "Ω";
+   document.getElementById("Rkok").innerHTML = "Rkok = " + Rkok.toFixed(2) + "Ω";
+}
+rinnanlasku();
+</script>
+<!-------------WHAT-------------->
+
+<!------------------------------->
+      <h3> Tehtävä 2 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+   <div id="koodi"><pre>
+  &LTh3 id="sampleheader">&LT/h3>
+  &LTp id="sample1">&LT/p>
+  &LTp id="sample2">&LT/p>
+  
+  &LTscript>
+  var sampleheader = "CYBER SECURITY";
+  var sample1 = "Cyber security is crucial in today's world, \
+   with sensitive information being transmitted online daily. \
+    Simple steps like strong passwords and software updates \
+     can improve your safety.";
+  var sample2 = "Cyber attacks are constantly evolving, \
+   and staying ahead is a never-ending battle. Invest in \
+    strong security measures and stay vigilant to minimize\
+     risks in our digital world.";
+  
+  function textsamples() {
+    document.getElementById("sampleheader").innerHTML = sampleheader;
+    document.getElementById("sample1").innerHTML = sample1;
+    document.getElementById("sample2").innerHTML = sample2;
+  }
+  textsamples();
+  &LT/script>
+</pre></div>
+
+<h3 id="sampleheader"></h3>
+<p id="sample1"></p>
+<p id="sample2"></p>
+
+<script>
+var sampleheader = "CYBER SECURITY";
+var sample1 = "Cyber security is crucial in today's world, \
+ with sensitive information being transmitted online daily. \
+  Simple steps like strong passwords and software updates \
+   can improve your safety.";
+var sample2 = "Cyber attacks are constantly evolving, \
+ and staying ahead is a never-ending battle. Invest in \
+  strong security measures and stay vigilant to minimize\
+   risks in our digital world.";
+
+function textsamples() {
+  document.getElementById("sampleheader").innerHTML = sampleheader;
+  document.getElementById("sample1").innerHTML = sample1;
+  document.getElementById("sample2").innerHTML = sample2;
+}
+textsamples();
+</script>
+
+<!------------------------------->
+      <h3> Tehtävä 3A </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+            <div id="koodi"><pre>
+ &LTp id="numbers";>&LT/p>
+ &LTp id="numbers_avg";>&LT/p>
+ 
+ &LTscript>
+ var numbers = ["5", "10", "30"];
+ var sum = 0;
+ 
+ for (var i = 0; i &LT numbers.length; i++) {
+   sum += parseInt(numbers[i]);
+ }
+ var number_avg = sum / numbers.length;
+ 
+ document.getElementById("numbers").innerHTML =
+ "Numbers:" + "&LTbr>" + "&LTbr>" +
+ numbers[0] + "&LTbr>" +
+ numbers[1] + "&LTbr>" +
+ numbers[2] + "&LTbr>";
+ 
+ document.getElementById("numbers_avg").innerHTML = 
+ "Average of the numbers = " + number_avg;
+ 
+ &LT/script>
+</pre></div>
+
+<p id="numbers";></p>
+<p id="numbers_avg";></p>
+
+<script>
+var numbers = ["5", "10", "30", "100"];
+var sum = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+  sum += parseInt(numbers[i]);
+}
+var number_avg = sum / numbers.length;
+
+document.getElementById("numbers").innerHTML =
+"Numbers:" + "<br>" + "<br>" +
+numbers[0] + "<br>" +
+numbers[1] + "<br>" +
+numbers[2] + "<br>" +
+numbers[3] + "<br>";
+
+document.getElementById("numbers_avg").innerHTML = 
+"Average of the numbers = " + number_avg;
+
+</script>
+
+<!------------------------------->
+      <h3> Tehtävä 3B </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+  <div id="koodi"><pre>
+  &LTp id="table_numbers";>&LT/p>
+  &LTp id="table_numbers_avg";>&LT/p>
+  
+  &LTscript>
+  var table = [
+    ["5", "10", "30", "100"],
+    ["12", "33", "50", "1"],
+    ["91", "20", "9", "14"]
+  ];
+  
+  var table_sum = 0;
+  for (var i = 0; i &LT table.length; i++) {
+    for (var j = 0; j &LT table[i].length; j++) {
+      table_sum += parseInt(table[i][j]);
+    }
+  }
+  var table_avg = table_sum / (table.length * table[0].length);
+  
+  var table_rows = "";
+    for (var i = 0; i &LT table.length; i++) {
+      table_rows += table[i].join(", ") + "&LTbr>";
+    }
+  
+  document.getElementById("table_numbers").innerHTML = 
+  "Table numbers are: &LTbr>&LTbr>" + table_rows;
+  document.getElementById("table_numbers_avg").innerHTML = 
+  "Table numbers avg is: " + table_avg.toFixed(2);
+  &LT/script>
+</pre></div>
+
+<p id="table_numbers";></p>
+<p id="table_numbers_avg";></p>
+
+<script>
+var table = [
+  ["5", "10", "30", "100"],
+  ["12", "33", "50", "1"],
+  ["91", "20", "9", "14"]
+];
+
+var table_sum = 0;
+for (var i = 0; i < table.length; i++) {
+  for (var j = 0; j < table[i].length; j++) {
+    table_sum += parseInt(table[i][j]);
+  }
+}
+var table_avg = table_sum / (table.length * table[0].length);
+
+var table_rows = "";
+  for (var i = 0; i < table.length; i++) {
+    table_rows += table[i].join(", ") + "<br>";
+  }
+
+document.getElementById("table_numbers").innerHTML = "Table numbers are: <br><br>" + table_rows;
+document.getElementById("table_numbers_avg").innerHTML = "Table numbers avg is: " + table_avg.toFixed(2);
+
+</script>
+
+<h3> Tehtävä 4 </h3>
+<p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+  &LTtable id="new_car_prices"> 
+
+   &LTscript>
+   
+   var tableData = [
+   
+     ["BRAND","MODEL","YEAR","PRICE","TAX%","TOTAL"],
+     ["TOYOTA","RAV4","2023","29 026€","24%","38 192€"],
+     ["AUDI","A4","2023","39 890€","24%","52 487€"],
+     ["MERCEDES BENZ","EQE","2023","57 912€","24%","76 200€"],
+     ["BMW","X7","2023","104 701€","24%","137 765€"],
+     ["SKODA","OCTAVIA","2023","23 214€","24%","30 545€"],
+     ["FORD","EXPLORER","2023","74 409€","24%","94 189€"]
+   
+   ];
+   
+   for (var i = 0; i &LT tableData.length; i++) {
+     var row = document.createElement("tr");
+     for (var j = 0; j &LT 6; j++) {
+       var cell = document.createElement("td");
+       cell.textContent = tableData[i][j];
+       row.appendChild(cell);
+     }
+     if (i === 0) {
+           row.style.fontWeight = "bold";
+         }
+     document.getElementById("new_car_prices").appendChild(row);
+   }
+   &LT/script>
+   &LT/table>
+</pre></div>
+
+<table id="new_car_prices"> 
+
+<script>
+
+var tableData = [
+  ["BRAND","MODEL","YEAR","PRICE","TAX%","TOTAL"],
+  ["TOYOTA","RAV4","2023","29 026€","24%","38 192€"],
+  ["AUDI","A4","2023","39 890€","24%","52 487€"],
+  ["MERCEDES BENZ","EQE","2023","57 912€","24%","76 200€"],
+  ["BMW","X7","2023","104 701€","24%","137 765€"],
+  ["SKODA","OCTAVIA","2023","23 214€","24%","30 545€"],
+  ["FORD","EXPLORER","2023","74 409€","24%","94 189€"]
+
+];
+
+for (var i = 0; i < tableData.length; i++) {
+  var row = document.createElement("tr");
+  for (var j = 0; j < 6; j++) {
+    var cell = document.createElement("td");
+    cell.textContent = tableData[i][j];
+    row.appendChild(cell);
+  }
+  if (i === 0) {
+        row.style.fontWeight = "bold";
+      }
+  document.getElementById("new_car_prices").appendChild(row);
+}
+</script>
+</table>
+
+<!--------- ÄLÄ HUKKAA --------->
+    </div>
+   </div>
+
+   <div class="footer">
+    <p>JavaScript</p>
+   </div>
+
+ </body>
+</html>

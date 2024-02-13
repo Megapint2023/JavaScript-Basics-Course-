@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+
+   <div class="header">
+     <h1> Javascript: FUNKTIOT </h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+        <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+        <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+        <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+        <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+        <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+        <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+        <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+        <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+        <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+        <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+<h3> Tehtävä 1 </h3>
+<p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+&LTp id="Resistanssit">&LT/p>
+&LTp id="R1">&LT/p>
+&LTp id="R2">&LT/p>
+&LTp id="R3">&LT/p>
+&LTp id="kolmeSarjaan">&LT/p>
+&LTp id="kolmeRinnan">&LT/p>
+
+&LTscript>
+var resistanssit = "Resistanssit";
+ var R1 = 100;
+ var R2 = 70;
+ var R3 = 25;
+ function kolmeSarjaan() {
+  var Rsarja = R1+R2+R3;
+   return Rsarja;
+ }
+ function kolmeRinnan(){
+  var Rsarja = 1/((1/R1) + (1/R2) + (1/R3));
+   return Rsarja;
+ }
+ document.getElementById("Resistanssit").innerHTML = "Resistanssit:";
+ document.getElementById("R1").innerHTML = "R1 = " + R1 + "Ω";
+ document.getElementById("R2").innerHTML = "R2 = " + R2 + "Ω";
+ document.getElementById("R3").innerHTML = "R3 = " + R3 + "Ω";
+ document.getElementById("kolmeSarjaan").innerHTML = 
+ "Yht:" + kolmeSarjaan() + "Ω";
+ 
+ document.getElementById("kolmeRinnan").innerHTML = 
+ "Rinnankytkentä:" + kolmeRinnan().toFixed(2) + "Ω";
+ 
+&LT/script>
+</pre></div>
+
+<p id="Resistanssit"></p>
+<p id="R1"></p>
+<p id="R2"></p>
+<p id="R3"></p>
+<p id="kolmeSarjaan"></p>
+<p id="kolmeRinnan"></p>
+
+<script>
+var resistanssit = "Resistanssit";
+ var R1 = 100;
+ var R2 = 70;
+ var R3 = 25;
+ function kolmeSarjaan() {
+  var Rsarja = R1+R2+R3;
+   return Rsarja;
+ }
+ function kolmeRinnan(){
+  var Rsarja = 1/((1/R1) + (1/R2) + (1/R3));
+   return Rsarja;
+ }
+ document.getElementById("Resistanssit").innerHTML = "Resistanssit:";
+ document.getElementById("R1").innerHTML = "R1 = " + R1 + "Ω";
+ document.getElementById("R2").innerHTML = "R2 = " + R2 + "Ω";
+ document.getElementById("R3").innerHTML = "R3 = " + R3 + "Ω";
+ document.getElementById("kolmeSarjaan").innerHTML = "Yht:" + kolmeSarjaan() + "Ω";
+ document.getElementById("kolmeRinnan").innerHTML = "Rinnankytkentä:" + kolmeRinnan().toFixed(2) + "Ω";
+
+</script>
+
+<!------------------------------->
+<h3> Tehtävä 2 </h3>
+<p> Lyhyesti, mitä koodaus tekee. </p>
+  <div id="koodi"><pre>
+&LTp id="tiedot">&LT/p>
+&LTp id="ala">&LT/p>
+&LTp id="A">&LT/p>
+&LTp id="tila">&LT/p>
+&LTp id="V">&LT/p>
+
+&LTscript>
+
+  var tiedot = "Laske pallon A Pinta-ala ja V Tilavuus kun säde on 15.";
+
+  var Pii = 3.14;
+  var R = 15; // R=sade (radius)
+
+function A(){
+  var A = 4 * Pii * R * R ;    // A=Pallon Pinta-ala (surface area)
+  return A;
+}
+
+function V(){
+  var V = 4 * Pii * R * R * R / 3;    // V=Pallon Tilavuus (volume)
+  return V;
+}
+
+ document.getElementById("tiedot").innerHTML = tiedot;
+ document.getElementById("ala").innerHTML = "Pallon Pinta-ala on:";
+ document.getElementById("A").innerHTML = A();
+ document.getElementById("tila").innerHTML = "Pallon Tilavuus on:";
+ document.getElementById("V").innerHTML = V();
+
+&LT/script>
+</pre></div>
+
+<p id="tiedot"></p>
+<p id="ala"></p>
+<p id="A"></p>
+<p id="tila"></p>
+<p id="V"></p>
+
+<script>
+
+  var tiedot = "Laske pallon A Pinta-ala ja V Tilavuus kun säde on 15.";
+
+  var Pii = 3.14;
+  var R = 15; // R=sade (radius)
+
+function A(){
+  var A = 4 * Pii * R * R ;    // A=Pallon Pinta-ala (surface area)
+  return A;
+}
+
+function V(){
+  var V = 4 * Pii * R * R * R / 3;    // V=Pallon Tilavuus (volume)
+  return V;
+}
+
+ document.getElementById("tiedot").innerHTML = tiedot;
+ document.getElementById("ala").innerHTML = "Pallon Pinta-ala on:";
+ document.getElementById("A").innerHTML = A();
+ document.getElementById("tila").innerHTML = "Pallon Tilavuus on:";
+ document.getElementById("V").innerHTML = V();
+
+</script>
+
+<!------------------------------->
+<h3> Tehtävä 3 </h3>
+<p> Lyhyesti, mitä koodaus tekee. </p>
+  <div id="koodi"><pre>
+&LTp id="ResistInfo">&LT/p>
+&LTp id="Resist_1">&LT/p>
+&LTp id="Resist_2">&LT/p>
+&LTp id="Resist_3">&LT/p>
+&LTp id="Resist_kok">&LT/p>
+
+&LTscript>
+var ResistInfo = "Vastusten kokonaisresistanssi:";
+
+var Resist_1 = 101;
+var Resist_2 = 202;   
+var Resist_3 = 303;
+
+function Resist_kok(){
+  var Resist_kok = Resist_1 + Resist_2 + Resist_3;
+  return Resist_kok;
+}
+
+document.getElementById("ResistInfo").innerHTML = ResistInfo;
+document.getElementById("Resist_1").innerHTML ="R1 =" + Resist_1 + "Ω";
+document.getElementById("Resist_2").innerHTML ="R2 =" + Resist_2 + "Ω";
+document.getElementById("Resist_3").innerHTML ="R3 =" + Resist_3 + "Ω";
+document.getElementById("Resist_kok").innerHTML =
+"Kokonaisresistanssi = " +  Resist_kok() + "Ω";
+
+
+&LT/script>
+</pre></div>
+
+<p id="ResistInfo"></p>
+<p id="Resist_1"></p>
+<p id="Resist_2"></p>
+<p id="Resist_3"></p>
+<p id="Resist_kok"></p>
+
+<script>
+var ResistInfo = "Vastusten kokonaisresistanssi:";
+
+var Resist_1 = 101;
+var Resist_2 = 202;   
+var Resist_3 = 303;
+
+function Resist_kok(){
+  var Resist_kok = Resist_1 + Resist_2 + Resist_3;
+  return Resist_kok;
+}
+
+document.getElementById("ResistInfo").innerHTML = ResistInfo;
+document.getElementById("Resist_1").innerHTML ="R1 =" + Resist_1 + "Ω";
+document.getElementById("Resist_2").innerHTML ="R2 =" + Resist_2 + "Ω";
+document.getElementById("Resist_3").innerHTML ="R3 =" + Resist_3 + "Ω";
+document.getElementById("Resist_kok").innerHTML ="Kokonaisresistanssi = " +  Resist_kok() + "Ω";
+
+</script>
+
+<!------------------------------->
+<h3> Tehtävä 4 </h3>
+<p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+&LTp id="laite1">&LT/p>
+&LTp id="laite2">&LT/p>
+
+&LTscript>
+ var laite1 = "BOSCH PBH 2100 RE";
+ var price1 = " - 135€";
+ var laite2 = "RAZER PRECI FOR GAMING CR";
+ var price2 = " - 130€";
+
+ // näyttäminen window.koneMERKKI-koodilla
+ document.getElementById("laite1").innerHTML = 
+ "Poravasara: " + window.laite1 + price1;
+ document.getElementById("laite2").innerHTML = 
+ "Pelihiiri: " + window.laite2 + price2;
+
+&LT/script>
+</pre></div>
+
+<p id="laite1"></p>
+<p id="laite2"></p>
+
+<script>
+ var laite1 = "BOSCH PBH 2100 RE";
+ var price1 = " - 135€";
+ var laite2 = "RAZER PRECI FOR GAMING CR";
+ var price2 = " - 130€";
+
+ // näyttäminen window.koneMERKKI-koodilla
+ document.getElementById("laite1").innerHTML = "Poravasara: " + window.laite1 + price1;
+ document.getElementById("laite2").innerHTML = "Pelihiiri: " + window.laite2 + price2;
+
+</script>
+<!--------- ÄLÄ HUKKAA --------->
+</div>
+</div>
+
+<div class="footer">
+  <p>JavaScript</p>
+</div>
+
+</body>
+</html>

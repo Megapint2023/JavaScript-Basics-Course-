@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+   <div class="header">
+     <h1> JavaScript: ALKUKAURA</h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+       <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+       <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+       <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+       <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+       <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+       <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+       <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+       <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+       <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+       <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+      <h3> Tehtävä 1 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+  &LTbutton class="the-button" type="button" onclick="hitme1()"> 
+  Hit me baby! &LT/button>
+  &LTbutton class="the-button" type="button" onclick="hitme2()"> 
+  One more time! &LT/button>
+  
+  &LTp id="teksti1">&LT/p>
+  &LTp id="teksti2">&LT/p>
+  
+  &LTscript>
+    var teksti1 = "Miten menee?"
+    var teksti2 = "Kuis hurisee?"
+    
+    function hitme1() {
+     document.getElementById("teksti1").innerHTML = teksti1;
+    }
+    function hitme2() {
+     document.getElementById("teksti2").innerHTML = teksti2;
+    }
+   &LT/script>
+   CSS ohje lisätty:
+   .the-button {
+    background-color: rgb(255, 68, 0);
+    color: white;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .the-button:active {
+    border: 1px solid black;
+  }
+   BREAKDOWN:
+   Koodaan ensin kaksi kaksi *nappia* näkyviin. 
+   Niiden alle määritän kaksi kohtaa eli ID:tä, johon funktiot syöttää
+   haluamani tekstit.
+   Sitten 'avaan' java scriptin ja määritän kaksi muuttujaa, joiden 
+   arvona on ns. *teksti*.
+   Lopuksi kaksi funktiota jotka näyttää sivostelle, määrättyyn id kohtaan
+   niiden sisällön.
+
+</pre></div>
+<button class="the-button" type="button" onclick="hitme1()"> Hit me baby! </button>
+<button class="the-button" type="button" onclick="hitme2()"> One more time! </button>
+
+<p id="teksti1"></p>
+<p id="teksti2"></p>
+
+<script>
+  var teksti1 = "Miten menee?"
+  var teksti2 = "Kuis hurisee?"
+  
+  function hitme1() {
+   document.getElementById("teksti1").innerHTML = teksti1;
+  }
+  function hitme2() {
+   document.getElementById("teksti2").innerHTML = teksti2;
+  }
+ </script>
+
+<!------------------------------->
+      <h3> Tehtävä 2 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+  &LTp id="kuvateksti1" >Which way?&LT/p>
+  &LTimg src="images/LEFT.jpg" onclick="hitimg1()" alt="Button1" 
+  style="width: 100px; height: 85px; cursor: pointer;">&LT/img>
+  
+  &LTimg src="images/RIGHT.jpg" onclick="hitimg2()" alt="Button2" 
+  style="width: 100px; height: 85px; cursor: pointer;">&LT/img>
+  
+  &LTp id="kuvateksti2" >Which way?&LT/p>
+  
+  &LTscript>
+    var kuvateksti1 = "&LTspan style='color: green'> Turn Left! &LT/span>"
+    var kuvateksti2 = "&LTspan style='color: red'> Turn Right! &LT/span>"
+  
+    function hitimg1() {
+     document.getElementById("kuvateksti1").innerHTML = kuvateksti1;
+    }
+    function hitimg2() {
+     document.getElementById("kuvateksti2").innerHTML = kuvateksti2;
+    }
+  
+  &LT/script>
+  CSS-ohje lisätty:
+  img:active {
+    border: 1px solid black;
+  }
+  BREAKDOWN:
+  Koodissa määritin kaksi ID kohtaa joihin sijoittuu/vaihtuu tekstit.
+  Näiden välissä on kaksi painiketta, jotka näkyvät sivustolla kuvina.
+  Eli näkyvillä on kaksi painiketta(kuvaa) joita klikkaamalla vaihtuu
+  teksti sekä tekstin väri.
+</pre></div>
+
+<p id="kuvateksti1" >Which way?</p>
+
+<img src="images/LEFT.jpg" onclick="hitimg1()" alt="Button1" 
+style="width: 100px; height: 85px; cursor: pointer;"></img>
+
+<img src="images/RIGHT.jpg" onclick="hitimg2()" alt="Button2" 
+style="width: 100px; height: 85px; cursor: pointer;"></img>
+
+<p id="kuvateksti2" >Which way?</p>
+
+<script>
+  var kuvateksti1 = "<span style='color: green; font-size:27px;'> Turn LEFT! </span>"
+  var kuvateksti2 = "<span style='color: red; font-size:27px;'> Turn RIGHT! </span>"
+
+  function hitimg1() {
+   document.getElementById("kuvateksti1").innerHTML = kuvateksti1;
+  }
+  function hitimg2() {
+   document.getElementById("kuvateksti2").innerHTML = kuvateksti2;
+  }
+
+</script>
+
+    </div>
+   </div>
+   <div class="footer">
+     <p>JavaScript</p>
+   </div>
+
+ </body>
+</html>

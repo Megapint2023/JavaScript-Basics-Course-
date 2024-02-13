@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+
+   <div class="header">
+     <h1> JavaScript: TAPAHTUMAT</h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+        <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+        <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+        <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+        <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+        <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+        <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+        <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+        <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+        <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+        <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+      <h3> Tehtävä 1 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+document.addEventListener('contextmenu', event => event.preventDefault()); *EI TOIMI*
+
+KOODI:
+&LTdiv style="color:red" onmousedown="mouse_Click(event)">
+  Click here (use any button).
+&LT/div>
+
+&LTdiv class="message-box">
+&LTp id="leftclick" style="color: rgb(0, 169, 42);">&LT/p>
+&LTp id="scrollclick" style="color: rgb(0, 0, 7);">&LT/p>
+&LTp id="rightclick" style="color: rgb(255, 0, 0);">&LT/p>
+&LT/div>
+
+&LTscript>
+ function mouse_Click(event) {
+  if(event.button==0)
+  {
+    document.getElementById("leftclick").innerHTML = "Mouse left click 'detected'";
+  }
+  if(event.button==1)
+  {
+    document.getElementById("scrollclick").innerHTML = "Scroll button click 'detected'";
+  }
+  if(event.button==2)
+  {
+    document.getElementById("rightclick").innerHTML = "Mouse right click 'detected'";
+  }
+ }
+&LT/script>
+CSS: lisätty ->
+.message-box {
+  border: 3px solid rgb(241, 7, 7);
+  background-color: rgb(142, 210, 255);
+  padding: 3px;
+  margin-bottom: 3px;
+}
+</pre></div>
+
+<div style="color:red" onmousedown="mouse_Click(event)">
+  Click here (use any button).
+</div>
+
+<div class="message-box">
+<p id="leftclick" style="color: rgb(0, 26, 255);"></p>
+<p id="scrollclick" style="color: rgb(0, 0, 7);"></p>
+<p id="rightclick" style="color: rgb(255, 0, 0);"></p>
+</div>
+
+<script>
+ function mouse_Click(event) {
+  if(event.button==0)
+  {
+    document.getElementById("leftclick").innerHTML = "Mouse left click 'detected'";
+  }
+  if(event.button==1)
+  {
+    document.getElementById("scrollclick").innerHTML = "Scroll button click 'detected'";
+  }
+  if(event.button==2)
+  {
+    document.getElementById("rightclick").innerHTML = "Mouse right click 'detected'";
+  }
+ }
+</script>
+
+
+<!-------------WHAT-------------->
+
+<!------------------------------->
+      <h3> Tehtävä 2 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+      <div id="koodi"><pre>
+ &LTdiv style="color:rgb(0, 106, 193); font-weight: bold" 
+ onmousedown="mouse_left_click(event)">
+   Resistance series/parallel value (left click / shift left click).
+ &LT/div>
+ 
+  &LTdiv class="message-box">
+     &LTp id="left_click" style="color: rgb(0, 0, 7);">&LT/p>
+     &LTp id="shift_left_click" style="color: rgb(0, 0, 7);">&LT/p>
+     &LT/div>
+ 
+ &LTscript>
+   var resistor_1 = 49;
+   var resistor_2 = 59;
+   var resistor_3 = 69;
+   var series_total = resistor_1 + resistor_2 + resistor_3;
+   var parallel = 1/((1/resistor_1) + (1/resistor_2) + (1/resistor_3));
+ 
+ 
+ function mouse_left_click(event) {
+   if(event.button==0 && event.shiftKey) 
+   {
+     document.getElementById("shift_left_click").innerHTML =
+ "Calculation of parallel connection resistance when: " + "&LTbr>" +
+ "resistor1 value = " + resistor_1 + "Ω" + "&LTbr>" + 
+  "resistor2 value = " + resistor_2 + "Ω" + "&LTbr>" +
+   "resistor3 value = " + resistor_3 + "Ω" + "&LTbr>" +
+     "Total parallel resistance = " + parallel.toFixed(2) + "Ω" + "&LTbr>";
+   }
+   else if(event.button==0)
+   {
+     document.getElementById("left_click").innerHTML = 
+ "Calculation of series (total) resistance when: " + "&LTbr>" +
+ "resistor1 value = " + resistor_1 + "Ω" + "&LTbr>" + 
+  "resistor2 value = " + resistor_2 + "Ω" + "&LTbr>" +
+   "resistor3 value = " + resistor_3 + "Ω" + "&LTbr>" +
+    "Total series resistance = " + series_total + "Ω" + "&LTbr>";
+   } 
+  }
+ &LT/script>
+</pre></div>
+
+<div style="color:rgb(0, 122, 210); font-weight: bold" onmousedown="mouse_left_click(event)">
+  Resistance series/parallel value (left click / shift left click).
+</div>
+
+ <div class="message-box">
+    <p id="left_click" style="color: rgb(0, 0, 7);"></p>
+    <p id="shift_left_click" style="color: rgb(0, 0, 7);"></p>
+    </div>
+
+<script>
+
+  var resistor_1 = 49;
+  var resistor_2 = 59;
+  var resistor_3 = 69;
+  var series_total = resistor_1 + resistor_2 + resistor_3;
+  var parallel = 1/((1/resistor_1) + (1/resistor_2) + (1/resistor_3));
+
+function mouse_left_click(event) {
+  if(event.button==0 && event.shiftKey) 
+  {
+    document.getElementById("shift_left_click").innerHTML =
+"Calculation of parallel connection resistance when: " + "<br>" +
+"resistor1 value = " + resistor_1 + "Ω" + "<br>" + 
+ "resistor2 value = " + resistor_2 + "Ω" + "<br>" +
+  "resistor3 value = " + resistor_3 + "Ω" + "<br>" +
+    "Total parallel resistance = " + parallel.toFixed(2) + "Ω" + "<br>";
+  }
+  else if(event.button==0)
+  {
+    document.getElementById("left_click").innerHTML = 
+"Calculation of series (total) resistance when: " + "<br>" +
+"resistor1 value = " + resistor_1 + "Ω" + "<br>" + 
+ "resistor2 value = " + resistor_2 + "Ω" + "<br>" +
+  "resistor3 value = " + resistor_3 + "Ω" + "<br>" +
+   "Total series resistance = " + series_total + "Ω" + "<br>";
+  } 
+ }
+</script>
+
+    </div>
+   </div>
+
+   <div class="footer">
+    <p>JavaScript</p>
+   </div>
+
+ </body>
+</html>

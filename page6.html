@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+<!--   <style>
+
+  </style> -->
+ </head>
+ <body>
+
+   <div class="header">
+     <h1> JavaScript: LOMAKKEET</h1>
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+        <a href="index.html" id="eiviiva"><li> ALKUKAURA </li></a>
+        <a href="page1.html" id="eiviiva"><li> MUUTTUJAT </li></a>
+        <a href="page2.html" id="eiviiva"><li> FUNKTIOT </li></a>
+        <a href="page3.html" id="eiviiva"><li> TAPAHTUMAT </li></a>
+        <a href="page4.html" id="eiviiva"><li> METODIT </li></a>
+        <a href="page5.html" id="eiviiva"><li> EHTO & TOISTO </li></a>
+        <a href="page6.html" id="eiviiva"><li> LOMAKKEET </li></a>
+        <a href="page7.html" id="eiviiva"><li> CSS & JS </li></a>
+        <a href="page8.html" id="eiviiva"><li> KIKKA-PAIKKA </li></a>
+        <a href="page9.html" id="eiviiva"><li> jQUERY </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9"<>
+<!------------------------------->
+
+      <h3> Tehtävä 1 </h3>
+      <p> Lyhyesti, mitä koodaus tekee. </p>
+<div id="koodi"><pre>
+  &LTscript>
+    function tarkistaEmail() {
+      var x = document.forms["omaEmail"]["email"].value;
+      if (x == "") {
+        alert("'Virheellinen' sähköposti, yritä uudelleen.");
+        return false;
+      }
+    }
+  &LT/script>
+  
+  &LTform name="omaEmail" action="/lomakefunktio.php" 
+  onsubmit="return tarkistaEmail()" method="post">
+   Enter eMail: &LTinput type="text" name="email">
+   &LTinput type="submit" value="Lähetä">
+  &LT/form>
+  &LTdiv id="teht1" class="tehtava" onclick="omaTeht_1()">
+  
+  
+    &LTbutton class="button_4"> TIP OF THE DAY &LT/button>
+  
+    &LTspan class="tehtavaTeksti" id="omaTeht_teksti_1"> &LTh3> Tämän laatikon koodaus: &LT/h3>
+     HTML-elementti &LTi>span&LT/i> ei ole parhain tapa tuottaa laatikkoon tekstiä.&LTbr>
+     Ongelma, rivinvaihdot joutuu tekemään &LTi>br&LT/i>-elementillä haluttuihin kohtiin.&LTbr>  
+     Parempi vaihto-ehto voi olla CSS-ohjeilla muotoiltu &LTi>pre&LT/i>-elementti.&LTbr>&LT/span> 
+   &LT/div>&LTbr>
+   
+   &LTscript>
+    function omaTeht_1() {
+     var popup = document.getElementById("omaTeht_teksti_1");
+     popup.classList.toggle("show");
+    }
+   &LT/script>
+</pre></div>
+<script>
+  function tarkistaEmail() {
+    var x = document.forms["omaEmail"]["email"].value;
+    if (x == "") {
+      alert("'Virheellinen' sähköposti, yritä uudelleen.");
+      return false;
+    }
+  }
+</script>
+
+<form name="omaEmail" action="/lomakefunktio.php" onsubmit="return tarkistaEmail()" method="post">
+ Enter eMail: <input type="text" name="email">
+ <input type="submit" value="Lähetä">
+</form>
+<div id="teht1" class="tehtava" onclick="omaTeht_1()">
+
+
+  <button class="button_4"> TIP OF THE DAY </button>
+
+  <span class="tehtavaTeksti" id="omaTeht_teksti_1"> <h3> Tämän laatikon koodaus: </h3>
+   HTML-elementti <i>span</i> ei ole parhain tapa tuottaa laatikkoon tekstiä.<br>
+   Ongelma, rivinvaihdot joutuu tekemään <i>br</i>-elementillä haluttuihin kohtiin.<br>  
+   Parempi vaihto-ehto voi olla CSS-ohjeilla muotoiltu <i>pre</i>-elementti.<br></span> 
+ </div><br>
+ <script>
+  function omaTeht_1() {
+   var popup = document.getElementById("omaTeht_teksti_1");
+   popup.classList.toggle("show");
+  }
+ </script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-------------WHAT-------------->
+
+    </div>
+   </div>
+
+   <div class="footer">
+    <p>JavaScript</p>
+   </div>
+
+ </body>
+</html>
